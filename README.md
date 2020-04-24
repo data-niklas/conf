@@ -1,6 +1,7 @@
 # conf
 
-TODO: Write a description here
+A very simple and minimal configuration file parser<br>
+It builds on top of the Crystal TOML parser
 
 ## Installation
 
@@ -9,7 +10,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      conf:
-       github: your-github-user/conf
+       github: data-niklas/conf
    ```
 
 2. Run `shards install`
@@ -20,7 +21,8 @@ TODO: Write a description here
 require "conf"
 ```
 
-TODO: Write usage instructions here
+Just look at the source code.<br>
+Seriously! There are just about ~60 lines of code (without the spaces inbetween)
 
 ## Development
 
@@ -28,7 +30,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/conf/fork>)
+1. Fork it (<https://github.com/data-niklas/conf/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Niklas Loeser](https://github.com/your-github-user) - creator and maintainer
+- [Niklas Loeser](https://github.com/data-niklas) - creator and maintainer
