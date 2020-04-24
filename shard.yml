@@ -1,0 +1,13 @@
+name: conf
+version: 0.1.0
+
+authors:
+  - Niklas Loeser <niklas@4loeser.net>
+
+crystal: 0.34.0
+
+license: MIT
+dependencies:
+  toml:
+    github: crystal-community/toml.cr
+    branch: master
