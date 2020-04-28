@@ -3,6 +3,7 @@ require "toml"
 class Conf
 
   @table = uninitialized TOML::Table
+  getter file
 
   def initialize(@file : String | Path)
     reload
