@@ -49,7 +49,7 @@ class Conf
   end
 
   def as_s?(key : String, default : String = "")
-    if @table[key].is_a?(String)
+    if @table.has_key?(key) && @table[key].is_a?(String)
       @table[key]
     else
       default
@@ -57,7 +57,7 @@ class Conf
   end
 
   def as_b?(key : String, default : Bool = false)
-    if @table[key].is_a?(Bool)
+    if @table.has_key?(key) && @table[key].is_a?(Bool)
       @table[key]
     else
       default
@@ -65,7 +65,7 @@ class Conf
   end
 
   def as_i?(key : String, default : Int64 = 0)
-    if @table[key].is_a?(Int64)
+    if @table.has_key?(key) && @table[key].is_a?(Int64)
       @table[key]
     else
       default
@@ -73,7 +73,7 @@ class Conf
   end
 
   def as_f?(key : String, default : Float64 = 0)
-    if @table[key].is_a?(Float64)
+    if @table.has_key?(key) && @table[key].is_a?(Float64)
       @table[key]
     else
       default
@@ -81,7 +81,7 @@ class Conf
   end
 
   def as_t?(key : String, default : Time)
-    if @table[key].is_a?(Time)
+    if @table.has_key?(key) && @table[key].is_a?(Time)
       @table[key]
     else
       default
@@ -89,7 +89,7 @@ class Conf
   end
 
   def as_a?(key : String, default : Array(TOML::Type) = [] of Array(TOML::Type))
-    if @table[key].is_a?(Array(TOML::Type))
+    if @table.has_key?(key) && @table[key].is_a?(Array(TOML::Type))
       @table[key]
     else
       default
@@ -97,7 +97,7 @@ class Conf
   end
 
   def as_h?(key : String, default : TOML::Table)
-    if @table[key].is_a?(TOML::Table)
+    if @table.has_key?(key) && @table[key].is_a?(TOML::Table)
       @table[key]
     else
       default
